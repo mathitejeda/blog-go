@@ -1,0 +1,23 @@
+package home
+
+import "blog/pages/layout"
+
+templ Home(name string) {
+	@layout.Layout() {
+		<div>hola { name }!!!!</div>
+		<table>
+			<thead>
+				<tr>
+					<th>head </th>
+					<th>hola </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>body </td>
+					<td>chau </td>
+				</tr>
+			</tbody>
+		</table>
+	}
+}
