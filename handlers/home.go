@@ -1,8 +1,8 @@
 package handlers
 
 import (
+    "blog/view/pages/home"
     "github.com/labstack/echo/v4"
-    "blog/pages/home"
     "net/http"
 )
 

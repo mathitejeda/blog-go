@@ -1,9 +1,9 @@
 package handlers
 
 import (
+    "blog/view/pages/blog"
     "github.com/labstack/echo/v4"
     "net/http"
-    "blog/pages/blog"
 )
 
 func registerBlogRoutes (e *echo.Echo) {
