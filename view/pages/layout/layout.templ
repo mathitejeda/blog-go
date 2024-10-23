@@ -1,19 +1,25 @@
 package layout
 
 templ Layout() {
-	<html>
-		<head>
-           <script src="https://unpkg.com/htmx.org@2.0.2"></script>
-           <link href="/assets/styles.css" rel="stylesheet" />
-        </head>
-		<body hx-boost="true">
-			<nav>
-                <h1>This is a navbar</h1>
-                <a href="/">home</a>
-				<a href="/blog">Blog</a>
-				<a href="/about">About</a>
-			</nav>
-			{ children... }
-		</body>
-	</html>
+<html>
+
+<head>
+	<script src="https://unpkg.com/htmx.org@2.0.2"></script>
+	<link href="/assets/styles.css" rel="stylesheet" />
+	<link href="/favicon.ico" rel="icon" />
+
+	<title>Mathias Tejeda</title>
+</head>
+
+<body hx-boost="true">
+	<nav>
+		<h1>This is a navbar</h1>
+		<a href="/">home</a>
+		<a href="/blog">Blog</a>
+		<a href="/about">About</a>
+	</nav>
+	{ children... }
+</body>
+
+</html>
 }
