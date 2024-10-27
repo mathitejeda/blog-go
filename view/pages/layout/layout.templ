@@ -1,5 +1,7 @@
 package layout
 
+import "blog/view/components"
+
 templ Layout() {
 <html>
 
@@ -12,12 +14,7 @@ templ Layout() {
 </head>
 
 <body hx-boost="true">
-	<nav>
-		<h1>This is a navbar</h1>
-		<a href="/">home</a>
-		<a href="/blog">Blog</a>
-		<a href="/about">About</a>
-	</nav>
+	@components.Navbar()
 	{ children... }
 </body>
 

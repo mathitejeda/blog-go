@@ -1,0 +1,26 @@
+package components
+
+type navLink struct {
+	section string
+	URL     string
+}
+
+func getNavLinks() []navLink {
+	return []navLink{
+		{section: "blog", URL: "/blog"},
+		{section: "about", URL: "/about"},
+	}
+}
+
+templ Navbar() {
+	<nav class="navbar">
+		<ul class="navbar_nav">
+			<li class="nav_item"><a href="/">This is a navbar </a></li>
+			for _, link := range getNavLinks() {
+				<li class="nav_item">
+					<a href={ templ.URL(link.URL) }>{ link.section }</a>
+				</li>
+			}
+		</ul>
+	</nav>
+}
