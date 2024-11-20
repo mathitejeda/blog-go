@@ -150,12 +150,16 @@ footer {
 
 .hamburger {
 	position: fixed;
+	/* Lo hace fijo en la pantalla */
 	top: 1rem;
+	/* 10px de distancia desde la parte superior */
 	right: 10px;
+	/* 10px de distancia desde la derecha */
 	z-index: 100;
 	display: none;
 	width: 1.25em;
 	height: 0.8em;
+	/* margin-right: 0.3em; */
 	border-top: 0.2em solid var(--enph-color);
 	border-bottom: 0.2em solid var(--enph-color);
 }

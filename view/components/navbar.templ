@@ -1,0 +1,34 @@
+package components
+
+type navLink struct {
+	section string
+	URL     string
+}
+
+func getNavLinks() []navLink {
+	return []navLink{
+		{section: "blog", URL: "/blog"},
+		{section: "about", URL: "/about"},
+	}
+}
+
+templ Navbar() {
+	<nav class="navbar">
+		<ul class="navbar-nav">
+			<li class="nav-item"><a href="/">home</a></li>
+			<li class="nav-item"><a href="/blog">Blog</a></li>
+			<li class="nav-item"><a href="/about">About</a></li>
+			<a href="javascript:void(0);" class="hamburger" onclick="toggleResponsive()"></a>
+		</ul>
+	</nav>
+	<script>
+		function toggleResponsive() {
+			var navbar = document.querySelector('.navbar');
+			if (navbar.classList.contains('responsive')) {
+				navbar.classList.remove('responsive');
+			} else {
+				navbar.classList.add('responsive');
+			}
+		}
+	</script>
+}
