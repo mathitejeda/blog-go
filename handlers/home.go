@@ -11,5 +11,5 @@ func registerHomeRoutes (e *echo.Echo) {
 }
 
 func handleHome(c echo.Context) error{
-    return render(c, http.StatusOK, home.Home("demonio"))
+    return render(c, http.StatusOK, home.Home())
 }

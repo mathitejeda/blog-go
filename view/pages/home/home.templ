@@ -2,22 +2,21 @@ package home
 
 import "blog/view/pages/layout"
 
-templ Home(name string) {
-	@layout.Layout() {
-		<div>hola { name }!!!!</div>
-		<table>
-			<thead>
-				<tr>
-					<th>head </th>
-					<th>hola </th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>body </td>
-					<td>chau </td>
-				</tr>
-			</tbody>
-		</table>
-	}
+templ Home() {
+@layout.Layout() {
+
+<head>
+	<title>Casita</title>
+</head>
+<section id="home">
+	<img src="/public/images/profile.jpg" alt="profile" class="imgBorderCircle" />
+	<h2 class="headingLg">hola !!!!</h2>
+	<p>
+		Hola, soy programador y juego juegos. Hice este blog porque queria aprender go y htmx, capaz algun dia publique cosas y van a estar aca abajo:
+	</p>
+</section>
+<footer>
+2024 Mathias Tejeda.
+</footer>
+}
 }
