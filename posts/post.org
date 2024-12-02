@@ -1,0 +1,5 @@
+#+TITLE=post
+#+AUTHOR=Mathias Tejeda
+
+*Primer post
+Esto es el primer post

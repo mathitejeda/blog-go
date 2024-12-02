@@ -1,7 +1,7 @@
 package main
 
 import (
-	"blog/handlers"
+	"blog/internal/handlers"
 	"github.com/labstack/echo/v4"
 )
 

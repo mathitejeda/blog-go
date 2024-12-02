@@ -1,0 +1,15 @@
+package home
+
+import "blog/internal/view/pages/layout"
+
+templ Home() {
+	@layout.Layout() {
+		<section id="home">
+			<img src="/public/images/profile.jpg" alt="profile" class="imgBorderCircle"/>
+			<h2 class="headingLg">hola !!!!</h2>
+			<p>
+				Hola, soy programador y juego juegos. Hice este blog porque queria aprender go y htmx, capaz algun dia publique cosas y van a estar aca abajo:
+			</p>
+		</section>
+	}
+}
