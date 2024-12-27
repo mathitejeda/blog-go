@@ -7,9 +7,9 @@ import (
 
 func main() {
 	app := echo.New()
-	app.Static("/assets", "view/static/assets")
-	app.Static("public", "view/public")
-	app.File("/favicon.ico", "view/public/favicon.ico")
+	app.Static("/assets", "internal/view/static/assets")
+	app.Static("public", "internal/view/public")
+	app.File("/favicon.ico", "internal/view/public/favicon.ico")
 	handlers.RegisterRoutes(app)
 	app.Logger.Fatal(app.Start(":1323"))
 }
