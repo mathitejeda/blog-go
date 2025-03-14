@@ -1,12 +1,15 @@
 package blog
 
 import "blog/internal/view/pages/layout"
+import "blog/internal/model/post"
+import "blog/internal/view/pages/posts"
 
-templ Blog() {
+templ Blog(postList []post.Post) {
 	@layout.Layout() {
 		<h1>Esto es el blog</h1>
 		<p>
 			Aca Agrego un texto en el blog para ver si esta ok
+			@posts.Posts(postList)
 		</p>
 	}
 }

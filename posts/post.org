@@ -1,4 +1,4 @@
-#+TITLE=post
+#+"TITLE=post
 #+AUTHOR=Mathias Tejeda
 
 *Primer post

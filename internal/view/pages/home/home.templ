@@ -10,6 +10,12 @@ templ Home() {
 			<p>
 				Hola, soy programador y juego juegos. Hice este blog porque queria aprender go y htmx, capaz algun dia publique cosas y van a estar aca abajo:
 			</p>
+			<ul hx-get="/posts" hx-trigger="load">
+				<li hx-swap="outerHTML">
+					<h3>Titulo</h3>
+					<p>Contenido</p>
+				</li>
+			</ul>
 		</section>
 	}
 }

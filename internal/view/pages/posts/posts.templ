@@ -1,11 +1,22 @@
 package posts
 
-import "blog/internal/view/pages/layout"
+import ( "blog/internal/view/pages/layout"
+"blog/internal/model/post"
+"fmt"
+)
 
-templ Posts() {
+templ Posts(p []post.Post) {
+	for _, post := range p {
+		<li>
+			<a href={ templ.URL( fmt.Sprintf("/posts/%s", post.Id) ) }>{post.Title}</a>
+		</li>
+	}
 }
 
-templ Post() {
+templ Post(p post.Post) {
 	@layout.Layout() {
+		<a href={ templ.URL("/blog") }> ← </a>
+		<h1>{p.Title}</h1>
+		<p>{p.Content}</p>
 	}
 }
