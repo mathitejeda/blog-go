@@ -1,5 +1,5 @@
-#+"TITLE=post
+#+TITLE=post
 #+AUTHOR=Mathias Tejeda
 
-*Primer post
+* Primer post
 Esto es el primer post
