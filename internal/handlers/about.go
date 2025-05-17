@@ -10,6 +10,6 @@ func registerAboutRoutes(e *echo.Echo) {
 	e.GET("/about", handleAbout)
 }
 
-func handleAbout (c echo.Context) error {
+func handleAbout(c echo.Context) error {
 	return render(c, http.StatusOK, about.About())
 }

@@ -1,22 +1,31 @@
 package posts
 
-import ( "blog/internal/view/pages/layout"
-"blog/internal/model/post"
-"fmt"
+import (
+	"blog/internal/model/post"
+	"blog/internal/view/pages/layout"
+	"fmt"
 )
 
 templ Posts(p []post.Post) {
-	for _, post := range p {
-		<li>
-			<a href={ templ.URL( fmt.Sprintf("/posts/%s", post.Id) ) }>{post.Title}</a>
-		</li>
-	}
+	<div id="posts">
+		for _, post := range p {
+			<div class="post-list-item" hx-trigger="click" hx-get={ string(templ.URL(fmt.Sprintf("/posts/%s", post.Id))) } hx-target="body" hx-push-url="true">
+				<div class="post-list-header">
+					<h2 class="post-list-title">{ post.Title }</h2>
+					<small class="post-list-date">{ post.DateAsString()}</small>
+				</div>
+				<p class="post-list-summary">
+					{ post.Summary }
+				</p>
+			</div>
+		}
+	</div>
 }
 
-templ Post(p post.Post) {
+templ Post(content string) {
 	@layout.Layout() {
-		<a href={ templ.URL("/blog") }> ← </a>
-		<h1>{p.Title}</h1>
-		<p>{p.Content}</p>
+		<div class="post-body">
+			@templ.Raw(content)
+		</div>
 	}
 }

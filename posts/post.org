@@ -1,5 +1,17 @@
-#+TITLE=post
-#+AUTHOR=Mathias Tejeda
+#+TITLE: Primer post!
+#+AUTHOR: Mathias Tejeda
+#+DATE: 2025-04-29
+#+SUMMARY: Primer post del blog.
 
-* Primer post
-Esto es el primer post
+Esta es como la tercera vez que lo hago pero aca va otro blog mas.
+
+
+Basicamente este blog lo empece porque tenia ganas de probar algo nuevo. Un dia me desperte vi un caballo en twitter y me dijo que leyera "[[https://hypermedia.systems/][hypermedia systems]]" asi que como un buen programador lo lei. El libro no era muy largo y discutia sobre los beneficios de utilizar las herramientas que ya nos da html en vez de usar un framework supercargado, en cambio ofrece una libreria muy interesante llamada [[https://htmx.org/][HTMX]]
+
+viendo esto me pico el bichito de la curiosidad y me llevo a crear mi tercer pagina (capaz hay mas) con los mismos colores y toda la bola pero esta vez creada con un stack diferente (golang, echo, templ, htmx). Si bien costo un poco pude aprender a dominar el stack y el producto final es esta pagina rapida y bastante simple.
+
+La idea es esta vez no abandonar el blog, que sea en espanol y intentar extenderlo (postgres en proceso) Capaz no toque tanto pero la idea es documentar mis aprendizajes y boludeces en general. Capaz no lo lea nadie pero con que una persona lo vea (aunque sea yo mismo). Ya es completamente satisfactorio.
+
+Como nota final los posts de este blog estan escritos en orgmode dentro de doom emacs. me parecio una herramienta copadisima para poder escribir y ver que pasa en tiempo real. Pude renderizarla con [[github.com/niklasfasching/go-org][go-org]] mitad siguiendo los tutoriales y mitad revisando el codigo fuente, lo que me parecio un gran hito.
+
+Dicho eso, dejo la primer entrada a disposicion del que quiera leerlo.

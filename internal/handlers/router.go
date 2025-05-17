@@ -5,8 +5,8 @@ import (
 )
 
 func RegisterRoutes(e *echo.Echo) {
-    registerHomeRoutes(e)
-    registerAboutRoutes(e)
-    registerBlogRoutes(e)
+	registerHomeRoutes(e)
+	registerAboutRoutes(e)
+	registerBlogRoutes(e)
 	registerPostRoutes(e)
 }

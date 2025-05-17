@@ -12,13 +12,17 @@ templ Layout() {
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 			<title>Mathias Tejeda</title>
 		</head>
+		@components.Navbar()
 		<body hx-boost="true">
-			@components.Navbar()
 			<br>
-			{ children... }
-			<footer>
-				2024 Mathias Tejeda.
-			</footer>
+			<div id="content">
+				<main class="content-wrap">
+					{ children... }
+				</main>
+				<footer>
+					2024 Mathias Tejeda.
+				</footer>
+			</div>
 		</body>
 	</html>
 }

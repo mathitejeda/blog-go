@@ -1,22 +1,34 @@
 package handlers
 
 import (
-	"blog/internal/view/pages/posts"
 	"blog/internal/model/post"
-    "github.com/labstack/echo/v4"
-    "net/http"
+	"blog/internal/view/pages/posts"
+	"github.com/labstack/echo/v4"
+	"github.com/microcosm-cc/bluemonday"
+	"net/http"
 )
 
-func registerPostRoutes (e *echo.Echo) {
+func registerPostRoutes(e *echo.Echo) {
 	e.GET("/posts", handlePosts)
 	e.GET("/posts/:id", handlePost)
 }
 
-func handlePosts (c echo.Context) error {
+func handlePosts(c echo.Context) error {
 	postList := post.GetPosts()
 	return render(c, http.StatusOK, posts.Posts(postList))
 }
 
-func handlePost (c echo.Context) error {
-	return render(c, http.StatusOK, posts.Post(post.GetById(c.Param("id"))))
+func handlePost(c echo.Context) error {
+	id := c.Param("id")
+
+	content, err := post.GetAsHTML(id)
+	p := bluemonday.UGCPolicy()
+
+	content = p.Sanitize(content)
+
+	if err != nil {
+		return c.String(http.StatusNotFound, "Post no encontrado")
+	}
+
+	return render(c, http.StatusOK, posts.Post(content))
 }
