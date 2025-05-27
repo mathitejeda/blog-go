@@ -12,6 +12,8 @@ viendo esto me pico el bichito de la curiosidad y me llevo a crear mi tercer pag
 
 La idea es esta vez no abandonar el blog, que sea en espanol y intentar extenderlo (postgres en proceso) Capaz no toque tanto pero la idea es documentar mis aprendizajes y boludeces en general. Capaz no lo lea nadie pero con que una persona lo vea (aunque sea yo mismo). Ya es completamente satisfactorio.
 
+Otra cosa a tener en cuenta: tuve que aprender un poco de docker para hacer esto porque no sabia nada. Por suerte tuve un poco de ayuda de [[https://templ.guide/hosting-and-deployment/hosting-using-docker/][esta docu de templ]] que me salvo bastante la vida. Ahora alguna vez voy a hostear esto? no lo se, es otra cosa que tengo que aprender. Si alguien ademas de mi esta leyendo esto significa que en efecto lo pude hostear.
+
 Como nota final los posts de este blog estan escritos en orgmode dentro de doom emacs. me parecio una herramienta copadisima para poder escribir y ver que pasa en tiempo real. Pude renderizarla con [[github.com/niklasfasching/go-org][go-org]] mitad siguiendo los tutoriales y mitad revisando el codigo fuente, lo que me parecio un gran hito.
 
 Dicho eso, dejo la primer entrada a disposicion del que quiera leerlo.
