@@ -21,8 +21,10 @@ WORKDIR /app
 
 COPY --from=builder /app/blog-go .
 
-COPY --from=builder /app/internal/view/public ./public
-COPY --from=builder /app/internal/view/static ./static
+COPY --from=builder /app/internal/view/public ./internal/view/public
+COPY --from=builder /app/internal/view/static ./internal/view/static
+COPY --from=builder /app/posts ./posts
+
 
 EXPOSE 8080
 
